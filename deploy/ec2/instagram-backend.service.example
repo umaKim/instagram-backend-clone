@@ -1,0 +1,15 @@
+[Unit]
+Description=Instagram Backend Clone
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/instagram-backend-clone
+EnvironmentFile=/etc/instagram-backend-clone.env
+ExecStart=/usr/bin/java -jar /opt/instagram-backend-clone/app.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

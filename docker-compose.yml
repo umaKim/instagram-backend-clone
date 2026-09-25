@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: instagram-backend-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: instagram
+      MONGO_INITDB_ROOT_PASSWORD: instagram
+      MONGO_INITDB_DATABASE: instagram_clone
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
