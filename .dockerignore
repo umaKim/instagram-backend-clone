@@ -4,5 +4,4 @@
 build
 out
 *.iml
-HELP.md
 docker-compose.yml
